@@ -9,4 +9,39 @@
             result: "" // Resultado esperado
             }
     }
- * */ 
+ * */
+import { averiguaCaso } from "./dom";
+let obj = {
+  status: "",
+  message: "",
+  data: {
+    number: 0,
+    result: "",
+  },
+};
+
+function fizzBuzz(n) {
+  obj.data.number = n;
+  obj.data.result = averiguaCaso(n);
+  obj.message=ponMensage(obj.data.result);
+
+
+}
+
+
+
+function ponMensage(res){
+if (res == "Fizz"){
+    return "Número divisible por 3";
+}else if (res=="Buzz"){
+    return "Número divisible por 5";
+
+}else if(res=="FizzBuzz"){
+    return "Número divisible por 3 y 5";
+}else{
+    return "Número no divisible por 3 ni 5"
+}
+
+
+
+}
