@@ -33,7 +33,7 @@ function printea() {
   }
 }
 
-export function averiguaCaso(valor) {
+function averiguaCaso(valor) {
   div3 = false;
   div5 = false;
 
@@ -68,7 +68,7 @@ function actualizaHistorial(valor) {
   historial2.appendChild(newItem2);
 }
 
-export function validaNumero(valor) {
+function validaNumero(valor) {
   if (typeof valor === "number" && !isNaN(valor)) {
     return true;
   } else {
