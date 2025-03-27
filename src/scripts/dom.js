@@ -68,7 +68,7 @@ function actualizaHistorial(valor) {
   historial2.appendChild(newItem2);
 }
 
-function validaNumero(valor) {
+export function validaNumero(valor) {
   if (typeof valor === "number" && !isNaN(valor)) {
     return true;
   } else {

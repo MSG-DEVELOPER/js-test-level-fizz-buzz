@@ -11,37 +11,36 @@
     }
  * */
 import { averiguaCaso } from "./dom";
+import { validaNumero } from "./dom";
+
 let obj = {
   status: "",
   message: "",
   data: {
-    number: 0,
-    result: "",
+    input: 0,
+    output: "",
   },
 };
 
-function fizzBuzz(n) {
-  obj.data.number = n;
-  obj.data.result = averiguaCaso(n);
-  obj.message=ponMensage(obj.data.result);
-
-
+export function fizzBuzz(numString) {
+  let n = parseInt(numString);
+  obj.data.input = n;
+  obj.data.output = averiguaCaso(n);
+  obj.message = ponMensage(obj.data.result);
+  let esNumero = validaNumero(n);
+  if (esNumero) {
+    obj.status = "ok";
+  }
 }
 
-
-
-function ponMensage(res){
-if (res == "Fizz"){
+function ponMensage(res) {
+  if (res == "Fizz") {
     return "Número divisible por 3";
-}else if (res=="Buzz"){
+  } else if (res == "Buzz") {
     return "Número divisible por 5";
-
-}else if(res=="FizzBuzz"){
+  } else if (res == "FizzBuzz") {
     return "Número divisible por 3 y 5";
-}else{
-    return "Número no divisible por 3 ni 5"
-}
-
-
-
+  } else {
+    return "Número no divisible por 3 ni 5";
+  }
 }
